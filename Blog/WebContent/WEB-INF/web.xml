@@ -2,12 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Blog</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>UserServlet</servlet-name>
@@ -36,5 +31,95 @@
   <servlet-mapping>
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsertServlet</display-name>
+    <servlet-name>InsertServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.InsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertServlet</servlet-name>
+    <url-pattern>/servlet/InsertServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateBlogServlet</display-name>
+    <servlet-name>UpdateBlogServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.UpdateBlogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateBlogServlet</servlet-name>
+    <url-pattern>/servlet/UpdateBlogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteBlogServlet</display-name>
+    <servlet-name>DeleteBlogServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.DeleteBlogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBlogServlet</servlet-name>
+    <url-pattern>/servlet/DeleteBlogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BlogListServlet</display-name>
+    <servlet-name>BlogListServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.BlogListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BlogListServlet</servlet-name>
+    <url-pattern>/servlet/BlogListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CommentListServlet</display-name>
+    <servlet-name>CommentListServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.CommentListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommentListServlet</servlet-name>
+    <url-pattern>/CommentListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddBlogServlet</display-name>
+    <servlet-name>AddBlogServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.AddBlogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBlogServlet</servlet-name>
+    <url-pattern>/servlet/AddBlogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LookOneServlet</display-name>
+    <servlet-name>LookOneServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.LookOneServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LookOneServlet</servlet-name>
+    <url-pattern>/servlet/LookOneServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateServletUI</display-name>
+    <servlet-name>UpdateServletUI</servlet-name>
+    <servlet-class>com.xupt.servlet.UpdateServletUI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateServletUI</servlet-name>
+    <url-pattern>/servlet/UpdateServletUI</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchBlogServlet</display-name>
+    <servlet-name>SearchBlogServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.SearchBlogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchBlogServlet</servlet-name>
+    <url-pattern>/servlet/SearchBlogServlet</url-pattern>
   </servlet-mapping>
 </web-app>

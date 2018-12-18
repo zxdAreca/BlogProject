@@ -11,7 +11,9 @@ import com.xupt.service.UserService;
 import com.xupt.service.impl.UserServiceImpl;
 
 /**
- * Servlet implementation class RegisterServlet
+ * register
+ * @author hd
+ *
  */
 public class RegisterServlet extends HttpServlet {
 	

@@ -1,10 +1,5 @@
 package com.xupt.dao.impl;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
@@ -34,7 +29,6 @@ public class UserDaoImpl implements UserDao{
 		}
 	}
 		
-
 
 	@Override
 	public User login(String username, String password) {

@@ -7,7 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>登录成功</h1>
-	<a href="${pageContext.request.contextPath}/servlet/LogoutServlet">安全退出</a>
+	id:${blog.id }<br/>
+	name:${blog.blog_name }<br/>
+	content:${blog.blog_content }<br/>
+	time:${blog.blog_time }<br/>
+	blog_id:${blog.blog_id }<br/>
+	
+	<a href="">查看评论</a>
 </body>
 </html>

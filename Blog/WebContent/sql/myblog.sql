@@ -26,10 +26,10 @@ CREATE TABLE `blog` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `blog_name` varchar(30) DEFAULT NULL,
   `blog_content` varchar(1000) NOT NULL,
-  `blog_time` date NOT NULL,
+  `blog_time` varchar(15) NOT NULL,
   `blog_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `blog` (
 
 LOCK TABLES `blog` WRITE;
 /*!40000 ALTER TABLE `blog` DISABLE KEYS */;
-INSERT INTO `blog` VALUES (1,'String','String类','2018-10-01',1),(2,'ArrayList','集合','2018-10-02',2),(3,'synchronized','多线程','2018-10-03',3),(4,'Http','httpServlet','2018-10-03',1);
+INSERT INTO `blog` VALUES (9,'zoukai','du','1998-10-03',4),(10,'keai','du','1998-10-03',4),(11,'buhzongya','du','1998-10-03',4),(14,'fsi','du','1998-10-03',6),(15,'gdsgds','du','1998-10-03',6),(16,'gsdgds','du','1998-10-03',6),(28,'最新','将来','2018-12-20',4),(31,'111','qqq','2018-12-2',5),(32,'String','hello','2018-10-1',5),(34,'计算机','计算机编程语言','2018-10-2',5),(35,'虚拟机','发斯蒂芬','2018-10-3',5),(36,'改革开放','周年','2018-12-2',6),(37,'wangyifefdsfs','zheshiyigeDemo22222','2018-12-1',5),(38,'wangyifefdsfs','zheshiyigeDemo22222','2018-12-1',5);
 /*!40000 ALTER TABLE `blog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +53,7 @@ CREATE TABLE `comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `comment_content` varchar(300) NOT NULL,
   `comment_id` int(11) NOT NULL,
-  `comment_time` date NOT NULL,
+  `comment_time` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,7 +64,6 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (1,'你特别烦的时候，先保持冷静或者看一部开心的电影或者喝一大杯水不要试图跟朋友聊天朋友是跟你分享快乐的人而不是分享你痛苦的人不要做一个唠唠叨叨的抱怨者从现在起要学会自己去化解去承受',2,'1998-10-01'),(2,'你特别烦的时候，先保持冷静或者看一部开心的电影或者喝一大杯水不要试图跟朋友聊天朋友是跟你分享快乐的人而不是分享你痛苦的人不要做一个唠唠叨叨的抱怨者从现在起要学会自己去化解去承受',2,'1998-10-01'),(3,'baibai',2,'2000-10-01'),(4,'hah',4,'2010-10-01');
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +82,7 @@ CREATE TABLE `user` (
   `email` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_name` (`username`,`password`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -92,7 +91,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (5,'nichen','zhangsan','333','11'),(6,'xiaowu','182092','123456','234@qq.com');
+INSERT INTO `user` VALUES (4,'Nuncy','110','xiaobai','123@qq.com'),(5,'nichen','zhangsan','333','11'),(6,'xiaowu','182092','123456','234@qq.com'),(7,'nichen','keai','admin','11@qq.com'),(8,'nichen','keai','admin','11@qq.com'),(9,'nichen','keai','admin','11@qq.com'),(10,'nichen','keai','admin','11@qq.com');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -105,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-15 20:11:23
+-- Dump completed on 2018-12-18 21:08:58
