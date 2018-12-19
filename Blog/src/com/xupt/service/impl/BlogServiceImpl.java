@@ -11,6 +11,7 @@ import com.xupt.service.BlogService;
 public class BlogServiceImpl implements BlogService {
 
 	private BlogDao dao = new BlogDaoImpl();
+	
 	@Override
 	public List<Blog> findAll() throws SQLException {
 		return dao.findAll();

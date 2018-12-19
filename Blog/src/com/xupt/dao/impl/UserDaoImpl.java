@@ -9,11 +9,7 @@ import com.xupt.util.DBCPUtil;
 
 
 /**
- * private int id;
-	private String nick;
-	private String username;
-	private String password;
-	private String email;
+ * 
  * @author hd
  *
  */
@@ -23,7 +19,10 @@ public class UserDaoImpl implements UserDao{
 	public void register(User user) {
 		try{
 			qr.update("insert into user(nick,username,password,email) values(?,?,?,?)", 
-					user.getNick(),user.getUsername(),user.getPassword(),user.getEmail());
+					user.getNick(),
+					user.getUsername(),
+					user.getPassword(),
+					user.getEmail());
 		}catch(Exception e){
 			e.printStackTrace();
 		}

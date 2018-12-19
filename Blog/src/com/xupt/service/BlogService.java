@@ -51,7 +51,7 @@ public interface BlogService {
 	void update(Blog blog) throws SQLException;
 	
 	/**
-	 * 
+	 * 通过 Userid 获取博客内容
 	 * @param id
 	 * @return
 	 */

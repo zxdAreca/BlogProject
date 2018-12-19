@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登录页</title>
+<title>login</title>
 </head>
 <body>	
 	<form action="${pageContext.request.contextPath }/servlet/UserServlet" method="post">

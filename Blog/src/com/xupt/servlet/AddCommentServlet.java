@@ -2,8 +2,6 @@ package com.xupt.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,32 +13,35 @@ import com.xupt.domain.Comment;
 import com.xupt.service.CommentService;
 import com.xupt.service.impl.CommentServiceImpl;
 
-public class CommentListServlet extends HttpServlet {
+
+public class AddCommentServlet extends HttpServlet {
 	
+	private static final long serialVersionUID = 1L;
 	private CommentService commentService = new CommentServiceImpl();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html;charset=utf-8");
-		
-//		int id = Integer.parseInt(request.getParameter("id"));
-		
-		Blog blog = (Blog)request.getSession().getAttribute("blog2");
-		
-		
-		List<Comment> list = new ArrayList<>();
+		Comment comment = new Comment();
 		
 		try {
 			
-			list = commentService.getCommentById(blog.getId());
+			String comment_content = request.getParameter("comment_content");
+			String comment_time = request.getParameter("comment_time");
+			
+			Blog blog = (Blog)request.getSession().getAttribute("blog2");
+		 	 
+			comment.setComment_content(comment_content);
+			comment.setComment_time(comment_time);
+			comment.setComment_id(blog.getId());
+			
+			commentService.insertComment(comment);
+			System.out.println("添加评论成功");
+			
+			request.getRequestDispatcher("/servlet/CommentListServlet").forward(request, response);;
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		System.out.println(list.size());
-		System.out.println("获取评论数据" + list);
-		request.setAttribute("st", list);
-		request.getRequestDispatcher("/commentList.jsp").forward(request, response);
 		
 	}
 

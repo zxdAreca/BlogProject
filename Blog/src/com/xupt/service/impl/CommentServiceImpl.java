@@ -11,10 +11,23 @@ import com.xupt.service.CommentService;
 
 
 public class CommentServiceImpl implements CommentService {
-	private CommentDao comment = new CommentDaoImpl();
+	
+	private CommentDao commentDao = new CommentDaoImpl();
+	
 	@Override
 	public List<Comment> getCommentById(int id) throws SQLException {
-		return comment.getCommentById(id);
+		return commentDao.getCommentById(id);
+	}
+	
+	@Override
+	public void deleteComment(int id) throws SQLException {
+		commentDao.deleteComment(id);
+	}
+
+	@Override
+	public void insertComment(Comment comment) throws SQLException {
+		commentDao.insertComment(comment);
+	
 	}
 
 }

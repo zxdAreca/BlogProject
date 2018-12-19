@@ -29,7 +29,7 @@ CREATE TABLE `blog` (
   `blog_time` varchar(15) NOT NULL,
   `blog_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `blog` (
 
 LOCK TABLES `blog` WRITE;
 /*!40000 ALTER TABLE `blog` DISABLE KEYS */;
-INSERT INTO `blog` VALUES (9,'zoukai','du','1998-10-03',4),(10,'keai','du','1998-10-03',4),(11,'buhzongya','du','1998-10-03',4),(14,'fsi','du','1998-10-03',6),(15,'gdsgds','du','1998-10-03',6),(16,'gsdgds','du','1998-10-03',6),(28,'最新','将来','2018-12-20',4),(31,'111','qqq','2018-12-2',5),(32,'String','hello','2018-10-1',5),(34,'计算机','计算机编程语言','2018-10-2',5),(35,'虚拟机','发斯蒂芬','2018-10-3',5),(36,'改革开放','周年','2018-12-2',6),(37,'wangyifefdsfs','zheshiyigeDemo22222','2018-12-1',5),(38,'wangyifefdsfs','zheshiyigeDemo22222','2018-12-1',5);
+INSERT INTO `blog` VALUES (2,'http','http','2018-12-12',1),(3,'servlet','EL表达式','2018-12-12',1),(4,'jsp','EL表达式','2018-12-12',1),(5,'jsp','EL表达式','2018-12-12',2),(6,'jsp','EL表达式','2018-12-12',3),(7,'jsp','EL表达式','2018-12-12',4),(41,'baitian','baab','2018-12-20',1);
 /*!40000 ALTER TABLE `blog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +55,7 @@ CREATE TABLE `comment` (
   `comment_id` int(11) NOT NULL,
   `comment_time` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,6 +64,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
+INSERT INTO `comment` VALUES (14,'hello',31,'1990-12-12'),(15,'wujinfan',39,'1990-12-12');
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +92,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (4,'Nuncy','110','xiaobai','123@qq.com'),(5,'nichen','zhangsan','333','11'),(6,'xiaowu','182092','123456','234@qq.com'),(7,'nichen','keai','admin','11@qq.com'),(8,'nichen','keai','admin','11@qq.com'),(9,'nichen','keai','admin','11@qq.com'),(10,'nichen','keai','admin','11@qq.com');
+INSERT INTO `user` VALUES (1,'xupt','xupt','110','116@qq.com'),(2,'acat','acat','8816','116@qq.com'),(3,'hello','jianglai','6080','116@qq.com'),(4,'sad','admin','admin','116@qq.com');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -104,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-18 21:08:58
+-- Dump completed on 2018-12-19 22:14:27

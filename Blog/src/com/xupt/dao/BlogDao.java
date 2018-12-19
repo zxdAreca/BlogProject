@@ -43,14 +43,14 @@ public interface BlogDao {
 	void update(Blog blog) throws SQLException;
 	
 	/**
-	 * 
+	 * 通过用户ID获取Blog表的信息
 	 * @param id
 	 * @return
 	 */ 
 	List<Blog> getBlogByUserId(int id) throws SQLException;
 	
 	/**
-	 * 
+	 * 查询单条数据
 	 * @param id
 	 * @return
 	 */

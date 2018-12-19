@@ -80,7 +80,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>CommentListServlet</servlet-name>
-    <url-pattern>/CommentListServlet</url-pattern>
+    <url-pattern>/servlet/CommentListServlet</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -121,5 +121,25 @@
   <servlet-mapping>
     <servlet-name>SearchBlogServlet</servlet-name>
     <url-pattern>/servlet/SearchBlogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteCommentServlet</display-name>
+    <servlet-name>DeleteCommentServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.DeleteCommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteCommentServlet</servlet-name>
+    <url-pattern>/servlet/DeleteCommentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddCommentServlet</display-name>
+    <servlet-name>AddCommentServlet</servlet-name>
+    <servlet-class>com.xupt.servlet.AddCommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCommentServlet</servlet-name>
+    <url-pattern>/servlet/AddCommentServlet</url-pattern>
   </servlet-mapping>
 </web-app>

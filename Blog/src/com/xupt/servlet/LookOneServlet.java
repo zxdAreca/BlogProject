@@ -21,9 +21,14 @@ public class LookOneServlet extends HttpServlet {
 	private BlogService blogService = new BlogServiceImpl(); 
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=utf-8");
+		
 		int id = Integer.parseInt(request.getParameter("id"));
 		Blog blog = blogService.getBlogById(id);
 		System.out.println(blog);
+		request.getSession().setAttribute("blog2", blog);
 		request.setAttribute("blog", blog);
 		request.getRequestDispatcher("/lookone.jsp").forward(request, response);
 	}

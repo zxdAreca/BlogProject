@@ -7,10 +7,13 @@ import java.util.Date;
 import java.util.List;
 
 import com.xupt.dao.BlogDao;
+import com.xupt.dao.CommentDao;
 import com.xupt.dao.UserDao;
 import com.xupt.dao.impl.BlogDaoImpl;
+import com.xupt.dao.impl.CommentDaoImpl;
 import com.xupt.dao.impl.UserDaoImpl;
 import com.xupt.domain.Blog;
+import com.xupt.domain.Comment;
 import com.xupt.domain.User;
 import com.xupt.service.BlogService;
 
@@ -18,6 +21,7 @@ public class Test {
 	
 	private UserDao user = new UserDaoImpl();
 	private BlogDao blog = new BlogDaoImpl();
+	private CommentDao comment = new CommentDaoImpl();
 	
 	@org.junit.Test
 	public void test1() {
@@ -71,6 +75,17 @@ public class Test {
 		
 		List<Blog> list = blog.searchBlog("%机%");
 		System.out.println(list);
+	}
+	
+	@org.junit.Test
+	public void Test7() {
+		try {
+			List<Comment> list = comment.getCommentById(15);
+			System.out.println(list);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

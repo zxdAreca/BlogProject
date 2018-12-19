@@ -22,9 +22,9 @@ public class BlogListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=utf-8");
-		List<Blog> list = new ArrayList<>(); 	
 		
-//		int id = Integer.parseInt(request.getParameter("id"));
+		
+		List<Blog> list = new ArrayList<>(); 	
 		
 		User user = (User)request.getSession().getAttribute("www");
 		

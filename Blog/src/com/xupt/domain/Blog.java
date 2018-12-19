@@ -10,11 +10,6 @@ public class Blog {
 	private String blog_time;
 	private int blog_id;
 	
-/*	public Blog(String blog_name, String blog_content) {
-		super();
-		this.blog_name = blog_name;
-		this.blog_content = blog_content;
-	}*/
 	@Override
 	public String toString() {
 		return "Blog [id=" + id + ", blog_name=" + blog_name + ", blog_content=" + blog_content + ", blog_time="

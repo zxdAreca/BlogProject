@@ -32,9 +32,7 @@ public class AddBlogServlet extends HttpServlet {
 			String blog_content = request.getParameter("blog_content");
 			String blog_time = request.getParameter("blog_time");
 			User user = (User)request.getSession().getAttribute("www");
-			
-			
-			
+
 			blog.setBlog_name(blog_name);
 			blog.setBlog_content(blog_content);
 			blog.setBlog_time(blog_time);
